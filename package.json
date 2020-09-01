@@ -9,10 +9,10 @@
   "author": "Khalunin Pavel",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.10.5",
+    "@babel/core": "^7.11.4",
     "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
     "@babel/preset-env": "^7.11.0",
-    "autoprefixer": "^9.8.5",
+    "autoprefixer": "^9.8.6",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-polyfill": "^6.26.0",
     "browser-sync": "^2.26.12",
@@ -20,6 +20,7 @@
     "colors": "^1.4.0",
     "cssnano": "^4.1.10",
     "del": "^5.1.0",
+    "flex-gap-polyfill": "^1.0.3",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-babel": "^8.0.0",
@@ -56,7 +57,9 @@
     "inputmask": "^5.0.5",
     "ion-rangeslider": "^2.3.1",
     "jquery": "^3.5.1",
+    "loading-attribute-polyfill": "^1.5.4",
     "popper.js": "^1.16.1",
+    "postcss-preset-env": "^6.7.0",
     "swiper": "^5.4.5",
     "wowjs": "^1.1.3"
   }

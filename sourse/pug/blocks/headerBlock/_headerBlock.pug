@@ -3,7 +3,7 @@ mixin headerBlock()
 	+b.headerBlock&attributes(attributes)
 		.container
 			+e.wrap
-				+pic("book")
+				+pic("book.png")
 				h1 Создано автопрокатом для&nbsp;автопрокатов
 				ul
 					li Сокращение ошибок персонала на&nbsp;#[span 99%]
@@ -11,4 +11,5 @@ mixin headerBlock()
 					li Увеличение доли чистой прибыли минимум на&nbsp;#[span 10%]
 				p Программа протестирована и&nbsp;доведена до&nbsp;совершенства на&nbsp;#[span 173 авто] и&nbsp;#[span 45358 договорах] с&nbsp;клиентами
 				+e.btn(href="#") Открыть PDF презентацию
+			+e.scroll-down
 	// end headerBlock

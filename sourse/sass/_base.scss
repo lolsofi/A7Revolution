@@ -17,6 +17,9 @@ html {
 	opacity: 0.7;
 }
 
+body{
+	min-height: 5000px;
+}
 body,
 html {
 	font-size: var(--fontSizeBase);
