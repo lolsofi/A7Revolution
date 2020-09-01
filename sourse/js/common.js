@@ -1,9 +1,6 @@
 const JSCCommon = {
-	// часть вызов скриптов здесь, для использования при AJAX
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
-	menuMobile: document.querySelector(".menu-mobile--js"),
-	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
-
+	menuMobile: document.querySelector(".topLine__toggle-block--js"), 
 	modalCall() {
 
 		$(".link-modal").fancybox({
@@ -74,6 +71,33 @@ const JSCCommon = {
 
 		}
 	},
+
+	// /modalCall
+	toggleMenu() {
+		if (this.btnToggleMenuMobile) {
+			this.btnToggleMenuMobile.forEach(element => {
+				element.addEventListener('click', () => {
+					console.log(1);
+					this.btnToggleMenuMobile.forEach(element => element.classList.toggle("on"));
+					this.menuMobile.classList.toggle("active");
+					document.body.classList.toggle("fixed");
+					return false;
+				});
+			});
+		}
+	},
+ 
+	mobileMenu() {
+		this.toggleMenu(); 
+		if (this.tnToggleMenuMobile) {
+			window.addEventListener('resize', () => {
+				if (window.matchMedia("(min-width: 992px)").matches) {
+					// this.toggleMenu(); 
+				}
+			}, { passive: true });
+		}
+	},
+	// /mobileMenu
 };
 const $ = jQuery;
 
@@ -81,7 +105,7 @@ function eventHandler() {
 	JSCCommon.modalCall(); 
 	JSCCommon.inputMask();
 	JSCCommon.ifie(); 
-
+	JSCCommon.mobileMenu();
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 	var x = window.location.host;
