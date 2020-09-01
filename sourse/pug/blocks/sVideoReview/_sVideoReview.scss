@@ -1,0 +1,62 @@
+	// start .sVideoReview
+.sVideoReview {
+		 
+	h2{
+		font-weight: bold;
+		line-height: (72 / 60);
+	}
+
+
+	&__img-wrap{
+		display: block;
+		text-align: center;
+		position: relative;
+		
+	}
+
+	&__img-bg{
+		max-width: 950px;
+		height: auto;
+		
+		img{
+			max-width: 100%;
+			height: auto;
+			background: #000000;
+			// opacity: 0.2;
+			border-radius: 10px;
+		}
+	}
+	
+	&__img-play{
+		position: absolute;
+		// left: 50%;
+    top: 44%;
+		width: 100%;
+		z-index: 1;
+		// align-items: center;
+		// justify-content: center;
+		
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+
+} // end.sVideoReview
