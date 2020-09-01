@@ -4,11 +4,10 @@ mixin sVideoReview()
 		.container
 			+b.section-title.text-center
 				h2 Видеообзор программы
-			+e.img-wrap(href="#")
-				+e.DIV.img-bg
-					img(src="img/@2x/video-review.jpg", alt="")
-				+e.DIV.img-play
-					img(src="img/svg/play-arrow.svg", alt="")
+			+e.video-wrap
+				<iframe width="950" height="525" src="https://www.youtube.com/embed/awaUKHAF1gs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			.text-center
+				+e.btn(href="#") Все видео-инструкции
 
 
 				

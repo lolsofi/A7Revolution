@@ -1,35 +1,7 @@
-	// start .sVideoReview
-.sVideoReview {
+
+	// start .sAdvance
+	.sAdvance {
 		 
-	h2{
-		font-weight: bold;
-		line-height: (72 / 60);
-	}
-
-
-	&__video-wrap{
-		// display: block;
-		text-align: center;
-		margin-bottom: 63px;
-		// position: relative;
-	}
-
-	&__btn{
-		// @extend .btn;
-		padding: 18px 49px;
-		color: $body-color;
-		background-color: $yellow;
-		font-weight: 600;
-		font-size: 20px;
-		line-height: (24 / 20);
-		border-radius: 10px;
-		margin-left: auto;
-    margin-right: auto;
-		&:hover{
-			color: $body-color;
-		}
-	}
-
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -51,4 +23,4 @@
 	@include media-breakpoint-down(md) {}
 	@include media-breakpoint-down(sm) {}
 
-} // end.sVideoReview
+} // end.sAdvance
