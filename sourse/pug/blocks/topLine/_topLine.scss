@@ -1,6 +1,45 @@
 
 	// start .topLine
 	.topLine {
+		padding-top: rem(28);
+		padding-bottom: rem(30);
+		.row{
+			align-items: center;
+			@include roww(45px);
+		}
+		&__text{
+			max-width: rem(140);
+			font-size: rem(14);
+			line-height: 150%;
+			color: #737373;
+		}
+		&__btn{
+			@extend .btn;
+			&.btn-primary{
+				width: rem(190);
+				white-space: nowrap;
+			}
+				&.btn-outline-dark{
+					border-color: transparent;
+				}
+		}
+		&__tel{
+			@extend .h5;
+		}
+		&__link{
+			border-bottom: 1px solid ;
+			font-size: rem(14);
+			line-height: (17 / 14);
+			&--video{
+				border-color: #E5E5E5;
+			}
+			&--call{
+				border-color: $primary;
+			}
+			&:hover{
+				border-color: transparent;
+			}
+		}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
