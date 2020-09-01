@@ -1,7 +1,17 @@
-
 	// start .topLine
-	.topLine {
-		 
+.topLine {
+		
+	&__col{
+		display: flex;
+		align-items: center;
+	}
+
+	&__item{
+		display: flex;
+		justify-content: space-between;
+	}
+
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

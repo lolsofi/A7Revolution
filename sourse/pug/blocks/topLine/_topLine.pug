@@ -3,11 +3,19 @@ mixin topLine()
 	+b.topLine.section#topLine&attributes(attributes)
 		.container
 			.row
-				.col-auto
+				+e.col.col-auto
 					+e.logo(href="#")
 						img(src="img/svg/logo.svg", alt="")
 					+e.text Онлайн контроль автопроката
-				.col-auto
+				+e.col.col-auto
+					+e.item
+						+e.video-link(href="#") Видео-инструкции
+						+e.btn.link-modal(href="#") Купить программу
+						+e.contacts
+							+e.tel(href="#") +7 495 215 24 25
+							+e.tel-text(href="#") Перезвоните мне
+						+e.btn.link-modal(href="#") Вход
+					
 
 
 
