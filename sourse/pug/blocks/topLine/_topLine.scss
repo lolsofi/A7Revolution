@@ -4,7 +4,10 @@
 		padding-bottom: rem(30);
 		.row{
 			align-items: center;
-			@include roww(45px);
+			@include media-breakpoint-up(xl) {
+
+				@include roww(45px);
+			}
 		}
 		&__text{
 			max-width: rem(140);
@@ -15,7 +18,10 @@
 		&__btn{
 			@extend .btn;
 			&.btn-primary{
-				width: rem(190);
+				@include media-breakpoint-up(xl) {
+
+					width: rem(190);
+				}
 				white-space: nowrap;
 			}
 				&.btn-outline-dark{
