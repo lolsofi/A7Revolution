@@ -2,10 +2,15 @@ mixin sAdvance()
 	// start sAdvance
 	+b.sAdvance.section#sAdvance&attributes(attributes)
 		.container
-			+e.items
-				.row
+			.row
+				mixin item(h,p)
 					.col-lg-4
 						+e.item
+							h3!= h
+							p!= p
 			
+				+item(`9&nbsp;лет`, `Мы&nbsp;сдавали авто каждый день и&nbsp;описывали процессы в&nbsp;автоматические правила.`)
+				+item(`99,99%`, `Процессов автоматизированно. В&nbsp;программе осталось всего 2&nbsp;ручных процесса: добавление нового авто и&nbsp;создание договора.`)
+				+item(`14,4&nbsp;млн.&nbsp;₽`, `Инвестиций в&nbsp;разработку программы: <br> &mdash;&nbsp;15&nbsp;808 часов программирования <br> &mdash;&nbsp;1&nbsp;056 часов дизайна`)
 				
 	// end sAdvance

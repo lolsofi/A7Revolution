@@ -15,19 +15,12 @@
 	}
 
 	&__btn{
-		// @extend .btn;
-		padding: 18px 49px;
-		color: $body-color;
-		background-color: $yellow;
-		font-weight: 600;
-		font-size: 20px;
-		line-height: (24 / 20);
-		border-radius: 10px;
+		@extend .btn;
+		@extend .btn-primary;
+		@extend .btn-block;
+		max-width: rem(320);
 		margin-left: auto;
-    margin-right: auto;
-		&:hover{
-			color: $body-color;
-		}
+		margin-right: auto;
 	}
 
 	@include media-breakpoint-up(xl) {}

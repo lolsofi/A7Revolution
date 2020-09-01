@@ -1,21 +1,24 @@
 mixin topLine()
 	// start topLine
-	+b.topLine.section#topLine&attributes(attributes)
+	+b.topLine&attributes(attributes)
 		.container
 			.row
-				+e.col.col-auto
-					+e.logo(href="#")
+				.col-auto
+					+e.logo(href="/")
 						img(src="img/svg/logo.svg", alt="")
+				.col
 					+e.text Онлайн контроль автопроката
-				+e.col.col-auto
-					+e.item
-						+e.video-link(href="#") Видео-инструкции
-						+e.btn.link-modal(href="#") Купить программу
-						+e.contacts
-							+e.tel(href="#") +7 495 215 24 25
-							+e.tel-text(href="#") Перезвоните мне
-						+e.btn.link-modal(href="#") Вход
-					
+				.col-auto
+					+e.link--video.text-body(href="#") Видео-инструкции
+				.col-auto
+					+e.btn.btn-sm.btn-primary(href="#") Купить программу
+				.col-auto.text-right
+					+e.tel.text-body(href="tel:+74952152425") +7 495 215 24 25
+					br
+					+e.link--call.text-body(href="#") Перезвоните мне
+				.col-auto
+					+e.btn.btn-sm.btn-outline-dark(href="#") Вход
+
 
 
 

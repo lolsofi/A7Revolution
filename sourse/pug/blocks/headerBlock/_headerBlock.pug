@@ -1,10 +1,14 @@
 mixin headerBlock()
 	// start headerBlock
-	+b.headerBlock.section#headerBlock&attributes(attributes)
+	+b.headerBlock&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
-						
+			+e.wrap
+				+pic("book")
+				h1 Создано автопрокатом для&nbsp;автопрокатов
+				ul
+					li Сокращение ошибок персонала на&nbsp;#[span 99%]
+					li Сокращение лишних затрат на&nbsp;#[span 100%]
+					li Увеличение доли чистой прибыли минимум на&nbsp;#[span 10%]
+				p Программа протестирована и&nbsp;доведена до&nbsp;совершенства на&nbsp;#[span 173 авто] и&nbsp;#[span 45358 договорах] с&nbsp;клиентами
+				+e.btn(href="#") Открыть PDF презентацию
 	// end headerBlock
