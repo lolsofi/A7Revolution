@@ -35,6 +35,10 @@ html {
 
 .section-title { 
 	padding-bottom: var(--sTPB);
+	h2{
+		font-weight: bold;
+		line-height: (72 / 60);
+	}
 }
 
 body {
