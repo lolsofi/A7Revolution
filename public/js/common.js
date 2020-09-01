@@ -1,10 +1,8 @@
 "use strict";
 
 var JSCCommon = {
-	// часть вызов скриптов здесь, для использования при AJAX
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
-	menuMobile: document.querySelector(".menu-mobile--js"),
-	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
+	menuMobile: document.querySelector(".topLine__toggle-block--js"),
 	modalCall: function modalCall() {
 		$(".link-modal").fancybox({
 			arrows: false,
@@ -71,14 +69,49 @@ var JSCCommon = {
 		if (isIE11) {
 			$("body").prepend('<p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p>');
 		}
-	}
+	},
+	// /modalCall
+	toggleMenu: function toggleMenu() {
+		var _this = this;
+
+		if (this.btnToggleMenuMobile) {
+			this.btnToggleMenuMobile.forEach(function (element) {
+				element.addEventListener('click', function () {
+					console.log(1);
+
+					_this.btnToggleMenuMobile.forEach(function (element) {
+						return element.classList.toggle("on");
+					});
+
+					_this.menuMobile.classList.toggle("active");
+
+					document.body.classList.toggle("fixed");
+					return false;
+				});
+			});
+		}
+	},
+	mobileMenu: function mobileMenu() {
+		this.toggleMenu();
+
+		if (this.tnToggleMenuMobile) {
+			window.addEventListener('resize', function () {
+				if (window.matchMedia("(min-width: 992px)").matches) {// this.toggleMenu(); 
+				}
+			}, {
+				passive: true
+			});
+		}
+	} // /mobileMenu
+
 };
 var $ = jQuery;
 
 function eventHandler() {
 	JSCCommon.modalCall();
 	JSCCommon.inputMask();
-	JSCCommon.ifie(); // JSCCommon.CustomInputFile();
+	JSCCommon.ifie();
+	JSCCommon.mobileMenu(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
 	var x = window.location.host;

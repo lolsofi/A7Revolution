@@ -5,6 +5,8 @@ include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sAdvance/_sAdvance.pug
 include ../blocks/sVideoReview/_sVideoReview.pug
+include ../blocks/sPrice/_sPrice.pug
+include ../blocks/sFree/_sFree.pug
 
 block variables
 	- let  mainPage= null
@@ -25,7 +27,8 @@ block pagecontent
 	//- +sContact()
 	+sAdvance()
 	+sVideoReview()
-	+footer()
+	+sPrice
+	+sFree
 		+topLine()
 
 		
