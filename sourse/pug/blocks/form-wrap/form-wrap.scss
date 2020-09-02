@@ -5,6 +5,7 @@
  	&__input-wrap{
 			// @extend .form-group;
 			margin-bottom: rem(30);
+			position: relative;
 		}
 		&__input{
 			// @extend .form-control;
@@ -15,7 +16,29 @@
 		 cursor: pointer;
 		 @extend .btn;
 		 @extend .btn-block;
- 	}
+	 }
+	 &__btn--show{
+		 position: absolute;
+		 top: rem(10);
+		 right: rem(20);
+		 display: inline-block;
+		 width: auto;
+		 padding: 0;
+		 svg,
+		 path
+		 {
+			 @include mt;
+		 }
+		 &.active{
+			 svg{
+				 path{
+					 &:nth-child(2){
+						 opacity: 0;
+					 }
+				 }
+			 }
+		 }
+	 }
  	label{
  		width: 100%;
  		display: block;

@@ -19,7 +19,6 @@
 		<meta property="og:image:height" content="504">
 		<!-- Custom Browsers Color-->
 		<meta name="theme-color" content="#3361d8">
-		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
@@ -50,7 +49,7 @@
 									</div>
 									<div class="topLine__col col-lg-auto text-lg-right"><a class="topLine__tel text-body" href="tel:+74952152425">+7 495 215 24 25</a><br/><a class="topLine__link topLine__link--call text-body link-modal" href="#modal-call">Перезвоните мне</a>
 									</div>
-									<div class="topLine__col col-lg-auto"><a class="topLine__btn btn-sm btn-light" href="#">Вход </a>
+									<div class="topLine__col col-lg-auto"><a class="topLine__btn btn-sm btn-light link-modal" href="#modal-in">Вход </a>
 									</div>
 								</div>
 							</div>
@@ -362,25 +361,28 @@
 						<input class="utm_medium" type="hidden" name="utm_medium"/>
 						<input class="utm_campaign" type="hidden" name="utm_campaign"/>
 						<div class="text-center">
-							<div class="form-wrap__title h4 strong">Авторизация
+							<div class="form-wrap__title h4 strong">Вход 
 							</div>
-							<p class="text-secondary mb-4">Заполните форму, мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время.</p>
 						</div>
-						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" placeholder="Электронная почта" name="email"/> 
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Введите логин (телефон)" name="text"/> 
 						</div>
 						<!-- +e.input-wrap-->
 						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="password" placeholder="Пароль" name="password"/>
+							<div class="form-wrap__btn form-wrap__btn--show"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M23.8475 11.5332C23.6331 11.2399 18.5245 4.35168 11.9999 4.35168C5.47529 4.35168 0.366469 11.2399 0.152297 11.5329C-0.0507657 11.8112 -0.0507657 12.1886 0.152297 12.4668C0.366469 12.7601 5.47529 19.6484 11.9999 19.6484C18.5245 19.6484 23.6331 12.7601 23.8475 12.4671C24.0508 12.1889 24.0508 11.8112 23.8475 11.5332ZM11.9999 18.066C7.19383 18.066 3.03127 13.4941 1.79907 11.9995C3.02968 10.5036 7.18351 5.93409 11.9999 5.93409C16.8057 5.93409 20.968 10.5052 22.2007 12.0006C20.9701 13.4965 16.8163 18.066 11.9999 18.066Z" fill="black"/>
+<path d="M11.9992 7.25278C9.38163 7.25278 7.25195 9.38245 7.25195 12.0001C7.25195 14.6177 9.38163 16.7473 11.9992 16.7473C14.6168 16.7473 16.7465 14.6177 16.7465 12.0001C16.7465 9.38245 14.6168 7.25278 11.9992 7.25278ZM11.9992 15.1649C10.2541 15.1649 8.83441 13.7452 8.83441 12.0001C8.83441 10.2549 10.2541 8.83523 11.9992 8.83523C13.7443 8.83523 15.164 10.2549 15.164 12.0001C15.164 13.7452 13.7444 15.1649 11.9992 15.1649Z" fill="black"/>
+</svg>
+							</div>
 						</div>
 						<!-- +e.input-wrap-->
 						<button class="form-wrap__btn btn-primary" type="submit">Войти
 						</button>
-						<div class="mb-1 text-center">Вы не зарегистрированы? <a class="tdn link-modal" href="#modal-reg">Зарегистрироваться</a></div>
-						<div class="mb-1 text-center">Забыли пароль? <a class="tdn" href="#">Восстановить пароль</a></div>
+						<div class="mt-3 text-center"> <a class="text-secondary link-modal" href="#modal-sms">Напомнить пароль по SMS</a></div>
 					</form>
 				</div>
 			</div>
 			<!-- #modal-in-->
-			<div class="  modal-win modal-form" id="modal-add-object">
+			<div class="  modal-win modal-form" id="modal-sms">
 				<div class="form-wrap">
 					<form>
 						<input type="hidden" name="example-input-field"/>
@@ -390,24 +392,45 @@
 						<input class="utm_medium" type="hidden" name="utm_medium"/>
 						<input class="utm_campaign" type="hidden" name="utm_campaign"/>
 						<div class="text-center">
-							<div class="form-wrap__title h4 strong">Добавлять объекты могут только зарегистрированные пользователи
+							<div class="form-wrap__title h4 strong">Напомнить пароль по SMS 
 							</div>
-							<p class="text-secondary mb-4">Введите ваш логин и пароль.</p>
 						</div>
-						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" placeholder="Электронная почта" name="email"/> 
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Введите логин (телефон)" name="text"/> 
 						</div>
 						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn btn-primary" type="submit">Напомнить пароль
+						</button>
+					</form>
+				</div>
+			</div>
+			<!-- #modal-sms-->
+			<div class="  modal-win modal-form" id="modal-pass">
+				<div class="form-wrap">
+					<form>
+						<input type="hidden" name="example-input-field"/>
+						<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+						<input class="utm_source" type="hidden" name="utm_source"/>
+						<input class="utm_term" type="hidden" name="utm_term"/>
+						<input class="utm_medium" type="hidden" name="utm_medium"/>
+						<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+						<div class="text-center">
+							<div class="form-wrap__title h4 strong">Введите пароль
+							</div>
+						</div>
 						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="password" placeholder="Пароль" name="password"/>
+							<div class="form-wrap__btn form-wrap__btn--show"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M23.8475 11.5332C23.6331 11.2399 18.5245 4.35168 11.9999 4.35168C5.47529 4.35168 0.366469 11.2399 0.152297 11.5329C-0.0507657 11.8112 -0.0507657 12.1886 0.152297 12.4668C0.366469 12.7601 5.47529 19.6484 11.9999 19.6484C18.5245 19.6484 23.6331 12.7601 23.8475 12.4671C24.0508 12.1889 24.0508 11.8112 23.8475 11.5332ZM11.9999 18.066C7.19383 18.066 3.03127 13.4941 1.79907 11.9995C3.02968 10.5036 7.18351 5.93409 11.9999 5.93409C16.8057 5.93409 20.968 10.5052 22.2007 12.0006C20.9701 13.4965 16.8163 18.066 11.9999 18.066Z" fill="black"/>
+<path d="M11.9992 7.25278C9.38163 7.25278 7.25195 9.38245 7.25195 12.0001C7.25195 14.6177 9.38163 16.7473 11.9992 16.7473C14.6168 16.7473 16.7465 14.6177 16.7465 12.0001C16.7465 9.38245 14.6168 7.25278 11.9992 7.25278ZM11.9992 15.1649C10.2541 15.1649 8.83441 13.7452 8.83441 12.0001C8.83441 10.2549 10.2541 8.83523 11.9992 8.83523C13.7443 8.83523 15.164 10.2549 15.164 12.0001C15.164 13.7452 13.7444 15.1649 11.9992 15.1649Z" fill="black"/>
+</svg>
+							</div>
 						</div>
 						<!-- +e.input-wrap-->
 						<button class="form-wrap__btn btn-primary" type="submit">Войти
 						</button>
-						<div class="mb-1 text-center">Вы не зарегистрированы? <a class="tdn link-modal" href="#modal-reg">Зарегистрироваться</a></div>
-						<div class="mb-1 text-center">Забыли пароль? <a class="tdn" href="#">Восстановить пароль</a></div>
 					</form>
 				</div>
 			</div>
-			<!-- #modal-add-object-->
+			<!-- #ьodal-pass-->
 			<div class="  modal-win modal-form" id="modal-thanks">
 				<div class="form-wrap">
 					<div class="text-center">
@@ -425,9 +448,6 @@
 		<!-- modal libs-->
 		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
 		<!-- modal libs-->
-		<!-- slider libs-->
-		<script src="libs/swiper/js/swiper.min.js"></script>
-		<!-- /slider libs-->
 		<script src="libs/inputmask/inputmask.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>

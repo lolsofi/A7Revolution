@@ -111,16 +111,24 @@ function eventHandler() {
 	JSCCommon.modalCall();
 	JSCCommon.inputMask();
 	JSCCommon.ifie();
-	JSCCommon.mobileMenu(); // JSCCommon.CustomInputFile();
-	// добавляет подложку для pixel perfect
+	JSCCommon.mobileMenu();
+	var btnShow = document.querySelectorAll('.form-wrap__btn--show');
 
-	var x = window.location.host;
-	var screenName; // screenName = '02.jpg';
+	if (btnShow) {
+		btnShow.forEach(function (el) {
+			el.addEventListener('click', function () {
+				var input = this.parentNode.querySelector("input");
 
-	if (screenName && x === "localhost:3000") {
-		$(".main-wrapper").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
-	} // /добавляет подложку для pixel perfect
-
+				if (this.classList.contains('active')) {
+					this.classList.remove('active');
+					input.type = "password";
+				} else {
+					this.classList.add('active');
+					input.type = "text";
+				}
+			});
+		});
+	}
 }
 
 ;

@@ -106,16 +106,27 @@ function eventHandler() {
 	JSCCommon.inputMask();
 	JSCCommon.ifie(); 
 	JSCCommon.mobileMenu();
-	// JSCCommon.CustomInputFile();
-	// добавляет подложку для pixel perfect
-	var x = window.location.host;
-	let screenName;
-	// screenName = '02.jpg';
-	if (screenName && x === "localhost:3000") {
-		$(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
-	}
-	// /добавляет подложку для pixel perfect
  
+	let btnShow = document.querySelectorAll('.form-wrap__btn--show');
+	if (btnShow) {
+		btnShow.forEach(function (el) {
+			
+			el.addEventListener('click', function () {
+				
+				let input = this.parentNode.querySelector(`input`)
+				if (this.classList.contains('active')) {
+					this.classList.remove('active')
+					input.type = "password"
+				}
+				else {
+					this.classList.add('active')
+					input.type = "text"
+					
+				}
+			})
+		})
+	}
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
