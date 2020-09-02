@@ -1,9 +1,7 @@
 mixin sVideoInstr()
 	// start sVideoInstr
-	+b.SECTION.sVideoInstr.section#sVideoInstr&attributes(attributes)
+	+b.sVideoInstr.section#sVideoInstr&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sVideoInstr
-				
-			.row
+			+e.video-wrap
+					<iframe width="950" loading="lazy" height="525" src="https://www.youtube.com/embed/awaUKHAF1gs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	// end sVideoInstr

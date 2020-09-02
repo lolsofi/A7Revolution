@@ -132,12 +132,14 @@
 					.row{
 						flex-grow: 0;
 					}
-					@include mt(.8);
+					@include mt(); 
 					visibility: hidden;
+					transform: scaleY(0);
+					transform-origin: 0 0;
 					&.active{
 						visibility: visible;
-						transform: translateY(0);
-						// z-index: 200;
+						transform: scaleY(1);
+						// opacity: 1;
 					}
 				}
 				

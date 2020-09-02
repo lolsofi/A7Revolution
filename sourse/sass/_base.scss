@@ -429,3 +429,125 @@ iframe {
 		font-size: 16px;
 	}
 }
+
+.pageHead{
+	margin-top: rem(12);
+	&__container{
+		// position: relative;
+		position: relative;
+		@include media-breakpoint-up(lg){
+
+			padding-left: 155px;
+			padding-right: 155px;
+		}
+		text-align: center;
+		
+	}
+	&__back{
+			@include media-breakpoint-up(lg) {
+
+				position: absolute;
+				left: 15px;
+				top: rem(15);
+				margin-top: 0;
+			}
+			margin-top: 10px;
+			margin-bottom: rem(10);
+		@extend .btn;
+		@extend .btn-sm;
+		@extend .btn-outline-light;
+		color: $body-color;
+		padding: rem(10) rem(20);
+		.icon{
+			color: $primary;
+			margin-right: rem(10);
+			font-size: rem(12);
+		}
+	}
+	h1{
+		font-weight: bold;
+		// @include rfs(60px);
+		
+	}
+	&__text{
+			@include media-breakpoint-up(lg){
+
+				@include rfs(20px);
+			}
+		color: $secondary;
+		padding-bottom: rem(45);
+	}
+}
+
+
+.nav{
+	background: #F8F8F8;
+	border-radius: 10px;
+	padding-left: rem(10);
+	padding-right: rem(10);
+	display: flex; 
+	z-index: 2;
+	position: relative;
+	li{ 
+		list-style: none;
+	}
+	li:hover > a{ 
+			background-color: darken($color: #F8F8F8, $amount: 10%); 
+	}
+	li a{
+		@extend .text-body;
+	}
+	ul + &__link{
+		position: relative;
+		&::after{
+			content: url(../img/svg/chevron-down.svg);
+			margin-left: rem(5);
+		}
+	}
+	&__link{
+		display: block;
+		padding: rem(20) rem(10);
+		text-align: center;
+		width: 100%;
+	}
+	&__item{
+		position: relative;
+		display: flex;
+		align-items: center;
+		flex-grow: 1;
+		.icon{
+			color: $primary;
+			font-size: rem(7);
+			position: relative;
+			margin-left: rem(-5);
+		}
+
+	}
+	&__item:last-child .menu-sub{
+		left: auto;
+		right: 0;
+	}
+}
+.nav__item:hover .menu-sub{
+	visibility: visible;
+	transform:  scaleY(1);
+	opacity: 1;
+}
+.menu-sub{ 
+	opacity: 0;
+	visibility: hidden;
+	transform:   scaleY(0);
+	transform-origin:  0 0;
+	position: absolute;
+	@include mt;
+	z-index: -1;
+	left: 0;
+	top: 100%;
+	min-width: rem(240);
+	background: #F8F8F8;
+	border-radius: 10px;
+	&__link{
+		display: block;
+		padding: rem(10) rem(15);
+	}
+}

@@ -20,11 +20,81 @@ block pagecontent
 
 	+topLine()
 		//- +top-nav()
-	+b.pageHead
-		+e.wrap
-			.container
-				
-				h1 Видео-инструкции
+	+b.pageHead 
+		+e.container.container 
+			+e.back(href="/") 
+				+icon('chevron-left')
+				| На главную
+			h1 Видео-инструкции
+			+e.text Ниже выберите пункт меню и нажмите проиграть ролик
+		.container 
+			mixin submenu(n)
+				+b.UL.menu-sub
+						+e.LI.item: +e.A.link(href="#")= `пункт меню ${n}`
+						+e.LI.item: +e.A.link(href="#")= `пункт меню ${n}`
+						+e.LI.item: +e.A.link(href="#")= `пункт меню ${n}`
+						+e.LI.item: +e.A.link(href="#")= `пункт меню ${n}`
+						+e.LI.item: +e.A.link(href="#")= `пункт меню ${n}`
+			.d-none.d-xl-block
+				+b.UL.nav
+					+e.LI.item
+						+e.A.link(href="#") Заказы (Э6)
+					+e.LI.item
+						+e.A.link(href="#") Клиенты
+					+e.LI.item
+						+e.A.link(href="#") Договора (Э5)
+					+e.LI.item
+						+submenu('1')
+						//- 
+						+e.A.link(href="#") Финансы
+					+e.LI.item
+						//- +submenu('2')
+						+e.A.link(href="#") Автопарк
+						
+					+e.LI.item
+						+submenu('3')
+						+e.A.link(href="#") Безопасность
+						
+					+e.LI.item
+						+submenu('4')
+						+e.A.link(href="#") Команда
+						
+					+e.LI.item
+						+submenu('5')
+						+e.A.link(href="#") Настройки
+						
+					+e.LI.item
+						+submenu('6')
+						+e.A.link(href="#") Справочная
+						
+					+e.LI.item
+						+submenu('7')
+						+e.A.link(href="#") Партнеры
+			.d-xl-none
+				.form-wrap__input-wrap.form-group
+					select.form-wrap__input.form-control
+						option(value="") Заказы (Э6)
+						option(value="") Клиенты
+						option(value="") Договора (Э5)
+						option(value="") Финансы
+						option(value="") Автопарк
+						option(value="") Безопасность
+						option(value="") Команда
+						option(value="") Настройки
+						option(value="") Справочная
+						option(value="")  Партнеры
+				.form-wrap__input-wrap.form-group
+					select.form-wrap__input.form-control
+						option(value="") пункт меню 1
+						option(value="") пункт меню 2
+						option(value="") пункт меню 3
+						option(value="") пункт меню 4
+						option(value="") пункт меню 5
+						option(value="") пункт меню 6
+						option(value="") пункт меню 7
+						option(value="") пункт меню 8
+						option(value="") пункт меню 9
+						option(value="") пункт меню 10
 
 
 	//- +headerBlock()
@@ -35,4 +105,5 @@ block pagecontent
 	//- +sVideoReview()
 	//- +sPrice
 	//- +sFree
-	+topLine()
+	+footer
+		+topLine2()
