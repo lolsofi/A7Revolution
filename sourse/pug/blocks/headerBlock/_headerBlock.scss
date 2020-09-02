@@ -32,7 +32,7 @@
 	}
 	&__wrap{
 		padding-top: var(--padd);
-		padding-bottom: calc(var(--padd) + #{rem(30)});
+		padding-bottom: calc(var(--padd) + #{rem(0)});
 			@include media-breakpoint-up(lg) { 
 				max-width: rem(550);
 			}
@@ -65,6 +65,7 @@
 		}
 		
 	}
+	
 	ul{
 		list-style: none;
 		@extend .h5;
@@ -87,7 +88,12 @@
 		@extend .btn;
 		@extend .btn-primary; 
 		width: 100%;
+			max-width: 230px;
+			padding-left: 5px;
+			padding-right: 5px;
+			@include media-breakpoint-up(sm) {
 		max-width: rem(320);
+			}
 	}
 	p{
 		color: $secondary;
@@ -112,6 +118,7 @@
 		margin-left:rem(-11);
 		width: rem(22);
 		height: rem(30);
+		bottom: 0;
 		// border-radius: ;
 		border: 2px solid #000;
 		border-radius: 10px;

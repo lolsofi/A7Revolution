@@ -1,9 +1,12 @@
 mixin sFree()
 	// start sFree
-	+b.SECTION.sFree.section#sFree&attributes(attributes)
+	+b.SECTION.sFree#sFree&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sFree
-				
-			.row
+			+e.inner.section
+				+e.wrap
+					h2  30&nbsp;дней полного функционала A7&nbsp;REVOLUTION
+					 
+					+e.price 0 ₽
+					+e.btn(href="#modal-test").link-modal Попробовать прямо сейчас
+					+pic("book.png")
 	// end sFree

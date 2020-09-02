@@ -1,6 +1,11 @@
 .footer {
-		
+	@include media-breakpoint-up(md) {
 
+		padding-bottom: rem(30);
+	}
+	.topLine{
+		border: none;
+	}
 
 // 
 @include media-breakpoint-up(xl) {}
@@ -33,7 +38,9 @@
 // 
 @include media-breakpoint-down(xl) {}
 
-@include media-breakpoint-down(lg) {}
+@include media-breakpoint-down(lg) {
+	text-align: center;
+}
 
 @include media-breakpoint-down(md) {}
 

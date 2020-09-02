@@ -69,7 +69,7 @@ $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
 $danger: $red !default;
-$light: $gray-100 !default;
+$light: #F9F9F9 !default;
 $dark: #363940 !default;
 
 // scss-docs-start theme-colors-map
@@ -80,7 +80,9 @@ $theme-colors: ("primary": $primary,
   "warning": $warning,
   "danger": $danger,
   "light": $light,
-  "dark": $dark) !default;
+  "dark": $dark,
+  "black": $black,
+  ) !default;
 // scss-docs-end theme-colors-map
 
 // Set a specific jump point for requesting color jumps
@@ -313,7 +315,7 @@ $line-height-lg: 2 !default;
 $h1-font-size: rem(60) !default;
 $h2-font-size: rem(60) !default;
 $h3-font-size: rem(40) !default;
-$h4-font-size: $font-size-base * 1.5 !default;
+$h4-font-size:rem(30) !default;
 $h5-font-size: rem(20) !default;
 $h6-font-size: $font-size-base !default;
 
@@ -524,12 +526,12 @@ $input-padding-y-lg: $input-btn-padding-y-lg !default;
 $input-padding-x-lg: $input-btn-padding-x-lg !default;
 $input-font-size-lg: $input-btn-font-size-lg !default;
 
-$input-bg: $white !default;
+$input-bg: #F8F8F8 !default;
 $input-disabled-bg: $gray-200 !default;
 $input-disabled-border-color: null !default;
 
 $input-color: $gray-700 !default;
-$input-border-color: $gray-400 !default;
+$input-border-color: #F8F8F8 !default;
 $input-border-width: $input-btn-border-width !default;
 $input-box-shadow: $box-shadow-inset !default;
 
@@ -543,7 +545,7 @@ $input-focus-color: $input-color !default;
 $input-focus-width: $input-btn-focus-width !default;
 $input-focus-box-shadow: $input-btn-focus-box-shadow !default;
 
-$input-placeholder-color: #F8F8F8 !default;
+$input-placeholder-color: #737373 !default;
 $input-plaintext-color: $body-color !default;
 
 $input-height-border: $input-border-width * 2 !default;

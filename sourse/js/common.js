@@ -115,9 +115,7 @@ function eventHandler() {
 		$(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
 	// /добавляет подложку для pixel perfect
-
  
-
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

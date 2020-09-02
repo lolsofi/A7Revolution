@@ -17,9 +17,7 @@ html {
 	opacity: 0.7;
 }
 
-body{
-	min-height: 5000px;
-}
+
 body,
 html {
 	font-size: var(--fontSizeBase);
@@ -44,6 +42,10 @@ html {
 }
 .section-title { 
 	padding-bottom: var(--sTPB);
+	h2{
+		font-weight: bold;
+		line-height: (72 / 60);
+	}
 }
 
 body {
@@ -232,21 +234,18 @@ ul {
 }
 
 
-// select.form-control {
-// 	background-image: url(../img/svg/chevron-up.svg);
-// 	background-repeat: no-repeat;
-// 	background-position: calc(100%  - 20px) 50%; // background-size: rem(18) ;
-// 	padding-right: rem(43px);
-// 	appearance: none !important;
+select.form-control {
+	background-image: url(../img/svg/chevron-down.svg);
+	background-repeat: no-repeat;
+	background-position: calc(100%  - 20px) 50%; // background-size: rem(18) ;
+	padding-right: rem(43px);
+	appearance: none !important; 
+	text-align: center;
 
-// 	&:not([size]):not([multiple]) {
-// 		height: $input-height;
-// 	}
+	&:focus::-ms-value {
 
-// 	&:focus::-ms-value {
-
-// 	}
-// }
+	}
+}
 
 
 input[type='number'] {
@@ -426,4 +425,7 @@ iframe {
 
 .btn{
 	font-weight: 600;
+	@include media-breakpoint-down(sm){
+		font-size: 16px;
+	}
 }

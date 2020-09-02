@@ -2,36 +2,62 @@
 	// start .sPrice
 	.sPrice {
 		&__table{
-			display: flex;
+			@include media-breakpoint-up(lg) {
+
+				display: flex;
 				border: 1px solid #E8E8E8;
 				border-radius: 10px;
-				margin-bottom: 50px;
+				margin-bottom: 35px;
+			}
 		}
 		&__item{
-			width: (100% / 6);
-			display: flex;
-			flex-direction: column;
-			display: flex;
-			flex-direction: column;
+			border: 1px solid #E8E8E8;
+			@include media-breakpoint-up(lg){
+				border: none;
+
+				width: (100% / 6);
+				display: flex;
+				flex-direction: column;
+				display: flex;
+				flex-direction: column;
+				margin-bottom: 0;
+			}
+			margin-bottom: 20px;
 			position: relative;
-			
-			&:nth-child(3){
-				&::before{
-					content: 'Фиксированные тарифы';
-					width: calc(300% - #{rem(17)} * 2);
-					background-color: $primary;
-					// padding: rem(4)
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					height: rem(30);
-					position: absolute;
-					top: rem(15);
-					left: rem(17);
-					border-radius: 5px;
-					z-index: 3;
+			border-radius: 10px;
+			&:nth-child(1){
+				@include media-breakpoint-down(lg) {
+					display: none;
 				}
 
+			}
+			@include media-breakpoint-up(lg) {
+				border-radius: 0;
+				&:nth-child(3),
+				&:nth-child(4),
+				&:nth-child(5){
+					.sPrice__label{
+						opacity: 0;
+					}
+				}
+				&:nth-child(3){
+					&::before{
+						content: 'Фиксированные тарифы';
+						width: calc(300% - #{rem(17)} * 2);
+						background-color: $primary;
+						// padding: rem(4)
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						height: rem(30);
+						position: absolute;
+						top: rem(15);
+						left: rem(17);
+						border-radius: 5px;
+						z-index: 3;
+					}
+					
+				}
 			}
 			&:not(:last-child){
 				// margin-right: -1px;
@@ -42,10 +68,20 @@
 			}
 		}
 		&__label{
-			padding: rem(4);
+			padding: rem(1);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: rem(30);
 			border-radius: 5px;
 			white-space: nowrap;
 			margin-bottom: rem(25);
+			margin-left: auto;
+			margin-right: auto;
+			@include media-breakpoint-down(lg){
+				
+				border-radius:5px 5px 0 0;
+			}
 			&.bg-dark{
 				color: #ffffff;
 			}
@@ -56,14 +92,65 @@
 			@extend .btn-block;
 			font-size: rem(16);
 			padding: rem(9.5) rem(10);
+			margin-left: auto;
+			margin-right: auto;
+			@include media-breakpoint-down(lg){
+				max-width: 223px;
+			}
 		}
 		&__td{
 			position: relative;
 			border: 1px solid #E8E8E8;
-			border-right: none;
+			@include media-breakpoint-down(lg){
+				border-left: none;
+				&:first-child{
+					padding-top: 0;
+					padding-left: 0;
+					padding-right: 0;
+					
+				}
+				&:last-child{ 
+					border-bottom: none;
+				}
+				&::before{
+					display: block;
+					margin-bottom: 0.1em; 
+				}
+				&:nth-child(2){
+					&::before {
+						content: 'GPS-мониторинг парка* (дополнительно по желанию)';
+					}
+				}
+				&:nth-child(3){
+					&::before {
+						content: 'Кол-во автомобилей';
+					}
+				}
+				&:nth-child(4){
+					&::before {
+						content: 'Кол-во пользователей';
+					}
+				}
+				&:nth-child(5){
+					&::before {
+						content: 'Доп. программирование';
+					}
+				}
+				&:nth-child(6){
+					&::before {
+						content: 'Цена в месяц:';
+					}
+				}
+			}
 			border-top: none;
-			padding: rem(15) rem(17);
-			padding-right: rem(10);
+			border-right: none;
+			@include media-breakpoint-up(xl) {
+
+				padding: rem(15) rem(17);
+				padding-right: rem(10);
+			}
+			
+			padding: rem(15) rem(5);
 			font-size: rem(14);
 			min-height: rem(45);
 			display: flex;
@@ -71,25 +158,54 @@
 			justify-content: center;
 			&:nth-child(1){
 				// flex-grow: 1;
-				min-height: rem(203);
+					@include media-breakpoint-up(lg){
+
+						min-height: rem(203);
+					}
 				display: block;
 			}
-			&:nth-child(6){
-				flex-grow: 1;
+			@include media-breakpoint-up(lg){
+				&:nth-child(6){
+					flex-grow: 1;
+				}
 			}
 			&:nth-child(2){
 				// flex-grow: 1;
-				min-height: rem(87);
+					@include media-breakpoint-up(xl) {
+
+						min-height: rem(87);
+					}
+					@include media-breakpoint-up(lg) {
+
+						min-height: rem(107);
+					}
 				padding-top: rem(10);
 				padding-bottom: rem(10);
 			}
-			&:not(:first-child){
-				margin-top: -1px;
+			&:nth-child(3),
+			&:nth-child(4),
+			&:nth-child(5){
+				// flex-grow: 1;
+					@include media-breakpoint-up(xl) {
 
+						min-height: rem(45);
+					}
+					@include media-breakpoint-up(lg) {
+
+						min-height: rem(75);
+					} 
 			}
-			&:last-child{
-				height: rem(75);
-			}
+				@include media-breakpoint-up(lg){
+
+					&:not(:first-child){
+						margin-top: -1px;
+						
+					}
+					&:last-child{
+						min-height: rem(75);
+						border-bottom: none;
+					}
+				}
 		}
 
 		&__title{
@@ -100,7 +216,16 @@
 		.strong{
 			font-weight: 600;
 		}
-
+		&__footer{
+			line-height: 175%;
+			a{
+				@extend .text-secondary;
+				border-bottom: 1px solid;
+				&:hover{
+					border-color:transparent;
+				}
+			}
+		}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

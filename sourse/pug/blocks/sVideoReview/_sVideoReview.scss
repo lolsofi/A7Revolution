@@ -1,24 +1,50 @@
 	// start .sVideoReview
 .sVideoReview {
-		 
-	h2{
-		font-weight: bold;
-		line-height: (72 / 60);
+	&__inner{
+
+		padding-top: 0;
+		position: relative;
+	&::before{
+		content: '';
+		// position: absolute;
+		@include a-cent(x);
+		bottom: 0;
+		@extend .container;
+		height: 1px;
+		border-bottom: 1px solid #E8E8E8;
 	}
-
-
+}
 	&__video-wrap{
-		// display: block;
-		text-align: center;
-		margin-bottom: 63px;
-		// position: relative;
+
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(45);
+		}
+		margin-bottom: rem(30);
+			
+		@include block(950, 525);
+		overflow: hidden;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(950);
+		iframe{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 10px;
+		}
 	}
 
 	&__btn{
 		@extend .btn;
 		@extend .btn-primary;
 		@extend .btn-block;
-		max-width: rem(320);
+		@include media-breakpoint-up(sm){
+
+			max-width: rem(320);
+		}
+		max-width: 230px;
 		margin-left: auto;
 		margin-right: auto;
 	}

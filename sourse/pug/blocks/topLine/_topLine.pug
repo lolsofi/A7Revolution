@@ -1,4 +1,5 @@
-mixin topLine()
+
+mixin topLineBody() 
 	// start topLine
 	+b.topLine&attributes(attributes)
 		.container
@@ -6,32 +7,41 @@ mixin topLine()
 				.col-lg-auto.col
 					+e.logo(href="/")
 						img(src="img/svg/logo.svg", alt="")
-				.col-auto.d-lg-none
-					+e.tel--show.text-body(href="tel:+74952152425") +7 495 215 24 25
-				.col-auto.d-lg-none
-					+b.toggle-menu-mobile--js.d-lg-none
-						span
-				.col-lg
-					+e.toggle-block--js
-						.row
-							+e.col.col.d-none.d-lg-block
-								+e.text Онлайн контроль автопроката
-							+e.col.col-lg-auto
-								+e.link--video.text-body(href="#") Видео-инструкции
-							+e.col.col-lg-auto
-								+e.btn.btn-sm.btn-primary(href="#") Купить программу
-							+e.col.col-lg-auto.text-lg-right
-								+e.tel.text-body(href="tel:+74952152425") +7 495 215 24 25
-								br
-								+e.link--call.text-body(href="#") Перезвоните мне
-							+e.col.col-lg-auto
-								+e.btn.btn-sm.btn-outline-dark(href="#") Вход
-
-
-
-
-
-
-
-
+				block
 	// end topLine
+mixin topLine() 
+	+topLineBody() 
+		.col-auto.d-lg-none
+			+e.tel--show.text-body(href="tel:+74952152425") +7 495 215 24 25
+		.col-auto.d-lg-none
+			+b.toggle-menu-mobile--js.d-lg-none
+				span
+		.col-lg
+			+e.toggle-block--js
+				.row
+					+e.col.col.d-none.d-lg-block
+						+e.text Онлайн контроль автопроката
+					+e.col.col-lg-auto
+						+e.link--video.text-body(href="#") Видео-инструкции
+					+e.col.col-lg-auto
+						+e.btn.btn-sm.btn-primary.link-modal(href="#modal-order") Купить программу
+					+e.col.col-lg-auto.text-lg-right
+						+e.tel.text-body(href="tel:+74952152425") +7 495 215 24 25
+						br
+						+e.link--call.text-body.link-modal(href="#modal-call") Перезвоните мне
+					+e.col.col-lg-auto
+						+e.btn.btn-sm.btn-light(href="#") Вход 
+mixin topLine2() 
+	+topLineBody()
+			+e.col.col.d-none.d-lg-block
+				+e.text Онлайн контроль автопроката
+			+e.col.col-lg-auto
+				+e.link--video.text-body(href="#") Видео-инструкции
+			+e.col.col-lg-auto
+				+e.btn.btn-sm.btn-primary.link-modal(href="#modal-order") Купить программу
+			+e.col.col-lg-auto.text-lg-right
+				+e.tel.text-body(href="tel:+74952152425") +7 495 215 24 25
+				br
+				+e.link--call.text-body.link-modal(href="#modal-call") Перезвоните мне
+			+e.col.col-lg-auto
+				+e.btn.btn-sm.btn-light(href="#") Вход 
