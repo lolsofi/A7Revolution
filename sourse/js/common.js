@@ -127,6 +127,31 @@ function eventHandler() {
 		})
 	}
 
+	const btnPrice = document.querySelectorAll(".sPrice__btn");
+	const btnNotPrice = document.querySelectorAll('[href="#modal-order"]:not(.sPrice__btn)');
+	const selectTarif = document.querySelector("#modal-order select");
+
+	// установить тариф
+	if (btnPrice) {
+		btnPrice.forEach(function (e) {
+			e.addEventListener('click', function () {
+				let data = this.dataset.tarif; 
+				selectTarif.value = data;
+			})
+		})
+	}
+	/// сбросить тариф
+	if (btnNotPrice) {
+		btnNotPrice.forEach(function (e) {
+			e.addEventListener('click', function () {
+				let data = selectTarif.querySelector('option').value;
+				selectTarif.value = data;
+			})
+		})
+	}
+ 
+
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

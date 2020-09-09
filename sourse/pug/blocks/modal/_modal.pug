@@ -18,15 +18,15 @@ mixin modal()
 		div(id="modal-order" class="  modal-win modal-form" )
 			+form-wrap
 				.text-center
-					+e.title.h4.strong Попробовать программу
+					+e.title.h4.strong Купить программу
 					p.text-secondary.mb-4 Заполните форму и&nbsp;наш менеджер свяжется с&nbsp;Вами в&nbsp;ближайшее время
 				//- +input("Ваше Имя")(required) 
 				.form-wrap__input-wrap.form-group
 					select.form-wrap__input.form-control
-						option(value="").price-1 Тариф «Гараж» – 5 000 ₽ / мес.
-						option(value="").price-2 Парк -  500 ₽ / мес. / 1 авто
-						option(value="").price-3 Флот – 5 000 ₽ / мес.
-						option(value="").price-4 Персональный  – 5 000 ₽ / мес.
+						option(value='tarif-1')  Тариф «Гараж» – 5 000 ₽ / мес.
+						option(value='tarif-2')  Парк -  500 ₽ / мес. / 1 авто
+						option(value='tarif-3')  Флот – 5 000 ₽ / мес.
+						option(value='tarif-4')  Персональный  – 5 000 ₽ / мес.
 				+input("Ваше имя")
 				+input("Введите телефон","tel")
 				+input("Город")
